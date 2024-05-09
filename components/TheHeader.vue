@@ -7,7 +7,9 @@
 </script>
 
 <template>
-  <header class="py-[10px] bg-[--header-red] relative z-[99999999999999]">
+  <header
+    class="fixed top-0 left-0 w-full py-[10px] bg-[--header-red] z-[99999999999999]"
+  >
     <MainContainer class="grid grid-cols-[auto,1fr] items-center text-[white]">
       <NuxtLink to="#greeting" class="text-[25px] font-bold">Nekit</NuxtLink>
       <MenuBurger

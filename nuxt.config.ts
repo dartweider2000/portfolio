@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   css: ["assets/scss/styles.scss"],
   googleFonts: {
     families: {
-      Montserrat: true,
+      Montserrat: [400, 500, 600, 700, 900],
     },
   },
   image: {

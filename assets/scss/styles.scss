@@ -8,8 +8,15 @@
   --header-height: 57.5px;
 
   --header-red: #912105;
+  --dark-block-bg: #1f2233;
+  --light-block-bg: #25273e;
+}
+
+*{
+  scroll-margin-top: var(--header-height);
 }
 
 html,body {
   font-family: Montserrat, sans-serif !important;
+  scroll-behavior: smooth;
 }

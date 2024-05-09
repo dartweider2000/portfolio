@@ -3,7 +3,13 @@
 </script>
 
 <template>
-  <ElDrawer v-model="isOpen" direction="ltr" :with-header="false" size="220px">
+  <ElDrawer
+    v-model="isOpen"
+    class="fixed top-0 left-0 h-full"
+    direction="ltr"
+    :with-header="false"
+    size="220px"
+  >
     <MenuNavigation :horizontal="false" />
   </ElDrawer>
 </template>
