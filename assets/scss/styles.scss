@@ -1,0 +1,15 @@
+@import "/node_modules/element-plus/dist/index.css";
+
+:root {
+  --container-padding: 10px;
+  --container-max-width: 1460px;
+  --el-transition-duration: 0.4s;
+
+  --header-height: 57.5px;
+
+  --header-red: #912105;
+}
+
+html,body {
+  font-family: Montserrat, sans-serif !important;
+}
