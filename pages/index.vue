@@ -17,6 +17,7 @@
           <SectionProject />
         </template>
       </PageSection>
+      <TheFooter />
     </div>
   </div>
 </template>

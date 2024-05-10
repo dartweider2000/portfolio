@@ -26,9 +26,9 @@
 
 <template>
   <div class="project">
-    <NuxtLink to="/" class="project__image">
+    <a target="_blank" href="/" class="project__image">
       <MyImage src="/spider-man.jpg" :quality="50" />
-    </NuxtLink>
+    </a>
     <div class="project__tabs tabs">
       <div class="tabs__title-area">
         <button
