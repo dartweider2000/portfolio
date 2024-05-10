@@ -40,19 +40,19 @@
           {{ text }}
         </button>
       </div>
-      <div class="tabs__body-area">
+      <div class="tabs__body-area overflow-hidden grid content-start">
         <div v-if="activeTab === 1" class="tabs__description">
           {{ description }}
         </div>
         <StackList v-else-if="activeTab === 2" :list="stackList" />
-        <div v-else class="tab__link">
+        <ElScrollbar v-else class="tab__link pb-[15px]">
           <a
             target="_blank"
-            class="p-[10px] inline-block bg-green-500 font-bold rounded-[5px]"
+            class="p-[10px] inline-block bg-green-500 font-bold rounded-[5px] overflow-ellipsis whitespace-nowrap"
             :href="link"
             >{{ link }}</a
           >
-        </div>
+        </ElScrollbar>
       </div>
     </div>
   </div>
@@ -64,11 +64,11 @@
 
     gap: clamp(5px, 2vw, 20px);
 
-    @media (min-width: 1001px) {
-      @apply grid-cols-[1fr,1fr] h-[600px];
+    @media (min-width: 1201px) {
+      @apply grid-cols-[1fr,650px] h-[600px];
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
       @apply grid-rows-[auto,auto];
     }
     // .project__image
@@ -78,8 +78,12 @@
         @apply absolute top-0 left-0 w-full h-full object-cover;
       }
 
-      @media (max-width: 1000px) {
+      @media (max-width: 1200px) {
         @apply pb-[50%];
+      }
+
+      @media (max-width: 768px) {
+        @apply pb-[70%];
       }
     }
     // .project__tabs

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-  import type { IProject } from "~/types";
-
   const { projectsList } = storeToRefs(useProjectsStore());
 </script>
 
@@ -9,13 +7,13 @@
     <TheHeader />
     <div class="content">
       <TheFullscreen id="greeting" />
-      <!-- <PageSection id="who-am-i">
+      <PageSection id="who-am-i">
         <template #title>Кто я</template>
         <template #default>
           <SectionWhoAmI />
         </template>
-      </PageSection> -->
-      <!-- <PageSection
+      </PageSection>
+      <PageSection
         v-for="{
           hash,
           description,
@@ -35,7 +33,7 @@
             :stack-list="stackList"
           />
         </template>
-      </PageSection> -->
+      </PageSection>
       <TheFooter id="contacts" />
     </div>
   </div>

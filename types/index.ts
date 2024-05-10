@@ -1,23 +1,7 @@
-import type { ComponentOptionsMixin, DefineComponent, PublicProps } from "vue";
-
 export interface IStackItem {
   borderColor: string;
   caption: string;
-  component?: DefineComponent<
-    {},
-    {},
-    {},
-    {},
-    {},
-    ComponentOptionsMixin,
-    ComponentOptionsMixin,
-    {},
-    string,
-    PublicProps,
-    Readonly<globalThis.ExtractPropTypes<{}>>,
-    {},
-    {}
-  >;
+  icon?: string;
   tooltipContent: string;
 }
 

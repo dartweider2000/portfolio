@@ -9,14 +9,12 @@
 <template>
   <div class="who__stack-body flex flex-wrap gap-[10px]">
     <StackItem
-      v-for="{ borderColor, caption, component, tooltipContent } in list"
+      v-for="{ borderColor, caption, icon, tooltipContent } in list"
       :border-color="borderColor"
       :caption="caption"
       :tooltip-content="tooltipContent"
-      :component="component"
-    >
-      <component :is="component" />
-    </StackItem>
+      :icon="icon"
+    />
   </div>
 </template>
 

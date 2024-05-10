@@ -2,13 +2,9 @@
   import type { IStackItem } from "~/types";
 
   const props = defineProps<IStackItem>();
-  const { borderColor, caption, component, tooltipContent } = toRefs(props);
+  const { borderColor, caption, icon, tooltipContent } = toRefs(props);
 
   const visible = ref<boolean>(false);
-
-  defineSlots<{
-    default?: () => any;
-  }>();
 </script>
 
 <template>
@@ -19,8 +15,8 @@
       @mouseenter="visible = true"
       @mouseleave="visible = false"
     >
-      <div v-if="component" class="stack__icon">
-        <slot />
+      <div v-if="icon" class="stack__icon">
+        <img :src="icon" alt="icon" />
       </div>
       <div class="stack__caption font-medium">{{ caption }}</div>
     </div>

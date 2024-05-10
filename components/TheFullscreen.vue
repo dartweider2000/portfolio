@@ -1,6 +1,4 @@
-<script setup lang="ts">
-  import bg from "~/assets/img/full-screen_bg.png";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="full-screen">
@@ -16,7 +14,7 @@
       </div>
     </MainContainer>
     <div class="full-screen__bg full">
-      <MyImage class="full" src="full-screen_bg.png" />
+      <MyImage class="full" src="full-screen_bg.png" loading="preload" />
     </div>
   </div>
 </template>

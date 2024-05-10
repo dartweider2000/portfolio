@@ -1,26 +1,25 @@
-import IconGit from "~/components/Icon/IconGit.vue";
-import IconStackChartJS from "~/components/Icon/Stack/IconStackChartJS.vue";
-import IconStackCss from "~/components/Icon/Stack/IconStackCss.vue";
-import IconStackElementPlus from "~/components/Icon/Stack/IconStackElementPlus.vue";
-import IconStackHtml from "~/components/Icon/Stack/IconStackHtml.vue";
-import IconStackJWT from "~/components/Icon/Stack/IconStackJWT.vue";
-import IconStackJavaScript from "~/components/Icon/Stack/IconStackJavaScript.vue";
-import IconStackNuxt from "~/components/Icon/Stack/IconStackNuxt.vue";
-import IconStackPinia from "~/components/Icon/Stack/IconStackPinia.vue";
-import IconStackSass from "~/components/Icon/Stack/IconStackSass.vue";
-import IconStackSwiper from "~/components/Icon/Stack/IconStackSwiper.vue";
-import IconStackTailwind from "~/components/Icon/Stack/IconStackTailwind.vue";
-import IconStackTypeScript from "~/components/Icon/Stack/IconStackTypeScript.vue";
-import IconStackVite from "~/components/Icon/Stack/IconStackVite.vue";
-import IconStackVue from "~/components/Icon/Stack/IconStackVue.vue";
-import IconStackVueAdvancedCropper from "~/components/Icon/Stack/IconStackVueAdvancedCropper.vue";
-import IconStackVuetify from "~/components/Icon/Stack/IconStackVuetify.vue";
-import IconStackWebpack from "~/components/Icon/Stack/IconStackWebpack.vue";
 import { Stack, type IStackItem } from "~/types";
 
-// @ts-ignore
+import html from "~/assets/icons/html.svg";
+import css from "~/assets/icons/css.svg";
+import chartjs from "~/assets/icons/chartjs.svg";
+import elementPlus from "~/assets/icons/element-plus.svg";
+import git from "~/assets/icons/git.svg";
+import javascript from "~/assets/icons/javascript.svg";
+import jwt from "~/assets/icons/jwt.svg";
+import nuxt from "~/assets/icons/nuxt.svg";
+import pinia from "~/assets/icons/pinia.svg";
+import sass from "~/assets/icons/sass.svg";
+import swiper from "~/assets/icons/swiper.svg";
+import tailwind from "~/assets/icons/tailwind.svg";
+import typescript from "~/assets/icons/typescript.svg";
+import vite from "~/assets/icons/vite.svg";
+import vueAdvancedCropper from "~/assets/icons/vue-advances-cropper.svg";
+import vue from "~/assets/icons/vue.svg";
+import vuetify from "~/assets/icons/vuetify.svg";
+import webpack from "~/assets/icons/webpack.svg";
+
 export const useStackStore = defineStore("contentStore", () => {
-  // @ts-ignore
   const stackMap = ref(
     new Map<Stack, IStackItem>([
       [
@@ -28,7 +27,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#e24e25",
           caption: "HTML",
-          component: IconStackHtml,
+          icon: html,
           tooltipContent: "Создаёт структура вашего сайта",
         },
       ],
@@ -37,7 +36,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#264DE4",
           caption: "CSS",
-          component: IconStackCss,
+          icon: css,
           tooltipContent: "Привносит щепотку магии в вашу вёрстку",
         },
       ],
@@ -46,7 +45,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#f095c0",
           caption: "SCSS",
-          component: IconStackSass,
+          icon: sass,
           tooltipContent: "Делает колдовство, более удобным занятием",
         },
       ],
@@ -55,7 +54,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#19B2B9",
           caption: "TailwindCSS",
-          component: IconStackTailwind,
+          icon: tailwind,
           tooltipContent: "Ускоряет процесс создания стилей",
         },
       ],
@@ -64,7 +63,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#F7DF1E",
           caption: "JavaScript",
-          component: IconStackJavaScript,
+          icon: javascript,
           tooltipContent: "Делает вашу страниу интерактивной",
         },
       ],
@@ -73,7 +72,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#3178C6",
           caption: "TypeScript",
-          component: IconStackTypeScript,
+          icon: typescript,
           tooltipContent: "Делает ваш код более надёжным и поддерживаемым",
         },
       ],
@@ -82,7 +81,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#e24e25",
           caption: "Git",
-          component: IconGit,
+          icon: git,
           tooltipContent: "Полный контроль над разработкой",
         },
       ],
@@ -91,7 +90,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#41B883",
           caption: "Vue",
-          component: IconStackVue,
+          icon: vue,
           tooltipContent: "Ваш интуитивный фреймворк",
         },
       ],
@@ -100,7 +99,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#00DC82",
           caption: "Nuxt",
-          component: IconStackNuxt,
+          icon: nuxt,
           tooltipContent: "Все возможности Vue и даже больше + SSR",
         },
       ],
@@ -109,7 +108,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#409EFF",
           caption: "ElementPlus",
-          component: IconStackElementPlus,
+          icon: elementPlus,
           tooltipContent: "UI компоненты для ваших Vue/Nuxt проектов",
         },
       ],
@@ -118,7 +117,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#FFD04B",
           caption: "Pinia",
-          component: IconStackPinia,
+          icon: pinia,
           tooltipContent: "Лучший state manager для ваших Vue/Nuxt проектов",
         },
       ],
@@ -127,7 +126,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#1867C0",
           caption: "Vuetify",
-          component: IconStackVuetify,
+          icon: vuetify,
           tooltipContent: "Тоже UI, но больше предпочитаю ElementPlus",
         },
       ],
@@ -136,7 +135,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#3EB37E",
           caption: "Vue Advanced Cropper",
-          component: IconStackVueAdvancedCropper,
+          icon: vueAdvancedCropper,
           tooltipContent: "Топовая обрезка фотографий",
         },
       ],
@@ -145,7 +144,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#FE777B",
           caption: "ChartJS",
-          component: IconStackChartJS,
+          icon: chartjs,
           tooltipContent: "Лучшие графики для вашего приложения",
         },
       ],
@@ -154,7 +153,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#41B883",
           caption: "Vue Router",
-          component: IconStackVue,
+          icon: vue,
           tooltipContent: "Навигация по вашему SPA",
         },
       ],
@@ -163,7 +162,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#857AFE",
           caption: "Vite",
-          component: IconStackVite,
+          icon: vite,
           tooltipContent: "Прогрессивынй сборшик проектов",
         },
       ],
@@ -172,7 +171,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#1C78C0",
           caption: "Webpack",
-          component: IconStackWebpack,
+          icon: webpack,
           tooltipContent: "Всё ещё актуальный сборшик проектов",
         },
       ],
@@ -181,7 +180,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#D63AFF",
           caption: "JWT",
-          component: IconStackJWT,
+          icon: jwt,
           tooltipContent: "Удобная авторизация",
         },
       ],
@@ -190,7 +189,7 @@ export const useStackStore = defineStore("contentStore", () => {
         {
           borderColor: "#0080FF",
           caption: "Swiper",
-          component: IconStackSwiper,
+          icon: swiper,
           tooltipContent: "Лучший слайдер",
         },
       ],
@@ -229,14 +228,14 @@ export const useStackStore = defineStore("contentStore", () => {
     ])
   );
 
-  // const getStackListByKeys = (keyList: Stack[]): IStackItem[] => {
-  //   return Array.from(stackMap.value.entries()) // @ts-ignore
-  //     .filter(([key, _]) => keyList.includes(key)) // @ts-ignore
-  //     .map(([_, value]) => value);
-  // };
+  const getStackListByKeys = (keyList: Stack[]): IStackItem[] => {
+    return Array.from(stackMap.value.entries())
+      .filter(([key, _]) => keyList.includes(key))
+      .map(([_, value]) => value);
+  };
 
   return {
     stackMap,
-    // getStackListByKeys,
+    getStackListByKeys,
   };
 });
