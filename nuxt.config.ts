@@ -8,6 +8,10 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@pinia/nuxt",
   ],
+  app: {
+    baseURL: "/portfolio/",
+    buildAssetsDir: "assets",
+  },
   pinia: {
     storesDirs: ["./stores/**"],
   },
