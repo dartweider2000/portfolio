@@ -1,22 +1,25 @@
 <script setup lang="ts">
-  defineProps<{
-    borderColor: string;
-    tooltipContent: string;
-    caption: string;
-  }>();
+  import type { IStackItem } from "~/types";
+
+  const props = defineProps<IStackItem>();
+  const { borderColor, caption, component, tooltipContent } = toRefs(props);
+
+  const visible = ref<boolean>(false);
 
   defineSlots<{
-    default: () => any;
+    default?: () => any;
   }>();
 </script>
 
 <template>
-  <ElTooltip :content="tooltipContent">
+  <ElTooltip placement="top" :content="tooltipContent" :visible="visible">
     <div
       class="stack inline-flex gap-[5px] items-center border-[1px] rounded-[50px]"
       :style="{ 'border-color': borderColor }"
+      @mouseenter="visible = true"
+      @mouseleave="visible = false"
     >
-      <div v-if="$slots.default" class="stack__icon">
+      <div v-if="component" class="stack__icon">
         <slot />
       </div>
       <div class="stack__caption font-medium">{{ caption }}</div>

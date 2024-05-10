@@ -3,7 +3,7 @@ import type { ComponentOptionsMixin, DefineComponent, PublicProps } from "vue";
 export interface IStackItem {
   borderColor: string;
   caption: string;
-  component: DefineComponent<
+  component?: DefineComponent<
     {},
     {},
     {},
@@ -47,6 +47,11 @@ export enum Stack {
   WebSocket = "WebSocket",
   Webpack = "Webpack",
   Vite = "Vite",
+  Pinia = "Pinia",
+  VueRouter = "Vue Router",
+  JWT = "JWT",
+  BAM = "BAM",
+  Vuetify = "Vuetify",
 }
 
 export interface ITab {

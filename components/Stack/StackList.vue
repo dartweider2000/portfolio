@@ -13,6 +13,7 @@
       :border-color="borderColor"
       :caption="caption"
       :tooltip-content="tooltipContent"
+      :component="component"
     >
       <component :is="component" />
     </StackItem>
