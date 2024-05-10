@@ -1,23 +1,42 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import type { IProject } from "~/types";
+
+  const { projectsList } = storeToRefs(useProjectsStore());
+</script>
 
 <template>
   <div class="grid grid-rows-[auto,1fr] min-h-dvh overflow-hidden">
     <TheHeader />
     <div class="content">
       <TheFullscreen id="greeting" />
-      <PageSection id="who-am-i">
+      <!-- <PageSection id="who-am-i">
         <template #title>Кто я</template>
         <template #default>
           <SectionWhoAmI />
         </template>
-      </PageSection>
-      <PageSection id="who-am-i">
-        <template #title>Мой первый проект</template>
+      </PageSection> -->
+      <!-- <PageSection
+        v-for="{
+          hash,
+          description,
+          image,
+          link,
+          stackList,
+          title,
+        } in projectsList"
+        :id="hash"
+      >
+        <template #title>{{ title }}</template>
         <template #default>
-          <SectionProject />
+          <SectionProject
+            :description="description"
+            :image="image"
+            :link="link"
+            :stack-list="stackList"
+          />
         </template>
-      </PageSection>
-      <TheFooter />
+      </PageSection> -->
+      <TheFooter id="contacts" />
     </div>
   </div>
 </template>

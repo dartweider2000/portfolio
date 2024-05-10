@@ -27,7 +27,7 @@
   }
 
   .full-screen {
-    @apply relative min-h-dvh min-w-[100dvw] flex justify-center items-center;
+    @apply relative min-h-svh w-[100vw] flex justify-center items-center;
     // .full-screen__content
     &__content {
       @apply relative grid gap-[10px] z-[3] text-white text-center justify-items-center;

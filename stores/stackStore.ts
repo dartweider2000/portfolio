@@ -8,6 +8,7 @@ import IconStackJavaScript from "~/components/Icon/Stack/IconStackJavaScript.vue
 import IconStackNuxt from "~/components/Icon/Stack/IconStackNuxt.vue";
 import IconStackPinia from "~/components/Icon/Stack/IconStackPinia.vue";
 import IconStackSass from "~/components/Icon/Stack/IconStackSass.vue";
+import IconStackSwiper from "~/components/Icon/Stack/IconStackSwiper.vue";
 import IconStackTailwind from "~/components/Icon/Stack/IconStackTailwind.vue";
 import IconStackTypeScript from "~/components/Icon/Stack/IconStackTypeScript.vue";
 import IconStackVite from "~/components/Icon/Stack/IconStackVite.vue";
@@ -17,8 +18,10 @@ import IconStackVuetify from "~/components/Icon/Stack/IconStackVuetify.vue";
 import IconStackWebpack from "~/components/Icon/Stack/IconStackWebpack.vue";
 import { Stack, type IStackItem } from "~/types";
 
+// @ts-ignore
 export const useStackStore = defineStore("contentStore", () => {
-  const stackMap = ref<Map<Stack, IStackItem>>(
+  // @ts-ignore
+  const stackMap = ref(
     new Map<Stack, IStackItem>([
       [
         Stack.Html,
@@ -183,6 +186,15 @@ export const useStackStore = defineStore("contentStore", () => {
         },
       ],
       [
+        Stack.Swiper,
+        {
+          borderColor: "#0080FF",
+          caption: "Swiper",
+          component: IconStackSwiper,
+          tooltipContent: "Лучший слайдер",
+        },
+      ],
+      [
         Stack.WebSocket,
         {
           borderColor: "white",
@@ -206,10 +218,25 @@ export const useStackStore = defineStore("contentStore", () => {
           tooltipContent: "Методология для удобной вёрстки",
         },
       ],
+      [
+        Stack.OOP,
+        {
+          borderColor: "#FFD04B",
+          caption: "ООП",
+          tooltipContent: "Классная парадигма программирования",
+        },
+      ],
     ])
   );
 
+  // const getStackListByKeys = (keyList: Stack[]): IStackItem[] => {
+  //   return Array.from(stackMap.value.entries()) // @ts-ignore
+  //     .filter(([key, _]) => keyList.includes(key)) // @ts-ignore
+  //     .map(([_, value]) => value);
+  // };
+
   return {
     stackMap,
+    // getStackListByKeys,
   };
 });

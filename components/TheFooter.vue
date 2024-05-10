@@ -9,7 +9,7 @@
       </div>
       <div class="footer__column">
         <p>Можете найти меня в</p>
-        <div class="flex justify-center gap-[10px]">
+        <div class="flex justify-center gap-[25px]">
           <a target="_blank" href="https://t.me/dartweider2000">
             <IconTelegram />
           </a>

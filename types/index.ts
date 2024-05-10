@@ -52,6 +52,8 @@ export enum Stack {
   JWT = "JWT",
   BAM = "BAM",
   Vuetify = "Vuetify",
+  Swiper = "Swiper",
+  OOP = "OOP",
 }
 
 export interface ITab {

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-  import type { ITab } from "~/types";
+  import type { IProject, ITab } from "~/types";
 
-  const { stackMap } = storeToRefs(useStackStore());
+  const props = defineProps<Omit<IProject, "hash" | "title">>();
+  const { description, image, link, stackList } = toRefs(props);
 
   const tabs = ref<ITab[]>([
     {
@@ -26,8 +27,8 @@
 
 <template>
   <div class="project">
-    <a target="_blank" href="/" class="project__image">
-      <MyImage src="/spider-man.jpg" :quality="50" />
+    <a target="_blank" :href="link" class="project__image">
+      <MyImage :src="image" :quality="50" />
     </a>
     <div class="project__tabs tabs">
       <div class="tabs__title-area">
@@ -41,10 +42,17 @@
       </div>
       <div class="tabs__body-area">
         <div v-if="activeTab === 1" class="tabs__description">
-          Это был мой самый ахуенный проект
+          {{ description }}
         </div>
-        <StackList v-else-if="activeTab === 2" :list="stackMap.values()" />
-        <div v-else class="tab__link">Ссылка: https://....</div>
+        <StackList v-else-if="activeTab === 2" :list="stackList" />
+        <div v-else class="tab__link">
+          <a
+            target="_blank"
+            class="p-[10px] inline-block bg-green-500 font-bold rounded-[5px]"
+            :href="link"
+            >{{ link }}</a
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -57,7 +65,7 @@
     gap: clamp(5px, 2vw, 20px);
 
     @media (min-width: 1001px) {
-      @apply grid-cols-[1fr,1fr] h-[500px];
+      @apply grid-cols-[1fr,1fr] h-[600px];
     }
 
     @media (max-width: 1000px) {
@@ -98,7 +106,7 @@
       padding-top: clamp(10px, 2vw, 20px);
 
       & > * {
-        font-size: clamp(16px, 3vw, 25px);
+        font-size: clamp(16px, 3vw, 23px);
       }
     }
     // .tabs__description

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-  defineProps<{
+  const props = defineProps<{
     to?: string;
   }>();
+  const { to } = toRefs(props);
 
   defineSlots<{
     "sub-list": () => any;
@@ -23,6 +24,11 @@
 
     if (!el.closest(".menu-item__sub-list"))
       isSubMenuOpen.value = !isSubMenuOpen.value;
+
+    if (to.value) {
+      isSidebarOpen.value = false;
+      isSubMenuOpen.value = false;
+    }
   };
 </script>
 

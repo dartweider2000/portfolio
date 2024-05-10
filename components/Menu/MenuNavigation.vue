@@ -27,6 +27,7 @@
           <MenuItem to="#landing-relives">Лендинг Relives</MenuItem>
           <MenuItem to="#snake">Игра змейка</MenuItem>
           <MenuItem to="#tanks">Игра танчики</MenuItem>
+          <MenuItem to="#dif">Диф. уравнения</MenuItem>
           <MenuItem to="#binance-app">Binance App</MenuItem>
           <MenuItem to="#video-recording">Video Recording</MenuItem>
         </MenuList>
@@ -36,8 +37,8 @@
       <template #default> Рабочие проекты </template>
       <template #sub-list>
         <MenuList :is-sub-menu="true">
-          <MenuItem to="#involta-iq">Involta IQ</MenuItem>
           <MenuItem to="#32band">Лендинг 3/2</MenuItem>
+          <MenuItem to="#involta-iq">Involta IQ</MenuItem>
         </MenuList>
       </template>
     </MenuItem>
