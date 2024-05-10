@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  const { stackMap } = storeToRefs(useStackStore());
+</script>
 
 <template>
   <div class="who">
@@ -29,7 +31,10 @@
         <span> интеграцией API </span> и авторизацией.
       </p>
     </div>
-    <div class="who__stack"></div>
+    <div class="who__stack grid">
+      <h3 class="who__stack-title text-[30px] font-semibold">Мой стек</h3>
+      <StackList :list="stackMap.values()" />
+    </div>
   </div>
 </template>
 
@@ -94,6 +99,11 @@
       @media (min-width: 1441px) {
         @apply col-span-2;
       }
+
+      gap: clamp(5px, 2vw, 10px);
+    }
+    &__stack-title {
+      font-size: clamp(22px, 4vw, 30px);
     }
   }
 </style>

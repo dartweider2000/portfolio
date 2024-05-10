@@ -11,6 +11,12 @@
           <SectionWhoAmI />
         </template>
       </PageSection>
+      <PageSection id="who-am-i">
+        <template #title>Мой первый проект</template>
+        <template #default>
+          <SectionProject />
+        </template>
+      </PageSection>
     </div>
   </div>
 </template>
