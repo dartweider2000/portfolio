@@ -1,15 +1,8 @@
-import { skipHydrate } from "pinia";
-
 export const useNavigationStore = defineStore("navigationStore", () => {
   const isMobileResolution = ref<boolean>(false);
   const isSidebarOpen = ref<boolean>(false);
   const hashChange = ref<number>(0);
 
-  watch(isMobileResolution, () => {
-    console.log(isMobileResolution.value, "mobred");
-  });
-
-  //onMounted(() => {
   const mobileMatchMedia = matchMedia("(max-width: 768px)");
   const matchMediaChangeHandler = () => {
     isMobileResolution.value = mobileMatchMedia.matches;
@@ -17,9 +10,6 @@ export const useNavigationStore = defineStore("navigationStore", () => {
   };
   matchMediaChangeHandler();
   mobileMatchMedia.addEventListener("change", matchMediaChangeHandler);
-
-  console.log("mounted");
-  // });
 
   return {
     isMobileResolution,
