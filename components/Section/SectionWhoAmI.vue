@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import me from "~/assets/img/me.webp";
+
   const { stackMap } = storeToRefs(useStackStore());
 </script>
 
@@ -6,7 +8,7 @@
   <div class="who">
     <div class="who__me">
       <div class="who__image">
-        <MyImage src="me.png" :quality="70" />
+        <MyImage :src="me" loading="lazy" />
       </div>
       <h3 class="who__hello"></h3>
     </div>

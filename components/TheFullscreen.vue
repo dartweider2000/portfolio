@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import fullScreen from "~/assets/img/full-screen_bg.webp";
+</script>
 
 <template>
   <div class="full-screen">
@@ -14,7 +16,7 @@
       </div>
     </MainContainer>
     <div class="full-screen__bg full">
-      <MyImage class="full" src="full-screen_bg.png" loading="preload" />
+      <MyImage class="full" :src="fullScreen" loading="preload" />
     </div>
   </div>
 </template>

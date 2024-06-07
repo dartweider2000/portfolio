@@ -21,7 +21,4 @@ export default defineNuxtConfig({
       Montserrat: [400, 500, 600, 700, 900],
     },
   },
-  image: {
-    dir: "assets/img",
-  },
 });

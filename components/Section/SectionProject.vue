@@ -28,7 +28,7 @@
 <template>
   <div class="project">
     <a target="_blank" :href="link" class="project__image">
-      <MyImage :src="image" :quality="50" />
+      <MyImage :src="image" loading="lazy" />
     </a>
     <div class="project__tabs tabs">
       <div class="tabs__title-area">

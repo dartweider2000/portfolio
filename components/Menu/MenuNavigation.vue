@@ -30,6 +30,7 @@
           <MenuItem to="#dif">Диф. уравнения</MenuItem>
           <MenuItem to="#binance-app">Binance App</MenuItem>
           <MenuItem to="#video-recording">Video Recording</MenuItem>
+          <MenuItem to="#login-form">Login Form</MenuItem>
         </MenuList>
       </template>
     </MenuItem>
